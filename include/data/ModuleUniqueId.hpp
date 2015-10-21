@@ -25,7 +25,7 @@ namespace zmf {
             ModuleUniqueId() : TypeId(0), InstanceId(0) { }
 
             ModuleUniqueId(uint16_t typeId, uint64_t instanceId) : TypeId(typeId), InstanceId(instanceId) {
-                //senderId.set_instanceid(InstanceId);
+                //zmf::proto::SenderI senderId.set_instanceid(InstanceId);
                 //senderId.set_typeid_(TypeId);
             }
 

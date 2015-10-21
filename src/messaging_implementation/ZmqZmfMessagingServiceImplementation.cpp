@@ -35,6 +35,8 @@ namespace zmf {
 
             core = corePtr;
             self = selfHandle;
+            selfSenderId.set_instanceid(self->UniqueId.InstanceId);
+            selfSenderId.set_typeid_(self->UniqueId.TypeId);
             config = configPtr;
 
             // Load configs
@@ -222,7 +224,7 @@ namespace zmf {
 
                 zmqpp::message hello;
                 hello.add(MESSAGE_TYPE_HELLO); // msg type
-                hello.add(self->UniqueId.getSenderId()); // identity
+                hello.add(selfSenderId.SerializeAsString()); // identity
                 hello.add(self_rep_addr); // pub addr
                 hello.add(self_pub_addr); // sub addr
                 socket->send(hello);
@@ -288,7 +290,7 @@ namespace zmf {
             zmqpp::message event;
 
             event.add(msg.getType().getMatch());
-            event.add(self->UniqueId.getSenderId());
+            event.add(selfSenderId.SerializeAsString());
             event.add(msg.getData());
 
             lock_pub_socket.lock();
@@ -312,7 +314,7 @@ namespace zmf {
 
             request.add(MESSAGE_TYPE_REQUEST); // type
             request.add(id); // msg_id
-            request.add(self->UniqueId.getSenderId()); // sender
+            request.add(selfSenderId.SerializeAsString()); // sender
             request.add(msg.getType().getMatch()); // match
             request.add(msg.getData()); // payload
 
@@ -501,7 +503,11 @@ namespace zmf {
 
         void ZmqZmfMessagingServiceImplementation::handleRequestReceived(zmqpp::message& message) {
             // get sender identity
-            zmf::data::ModuleUniqueId request_identity = zmf::data::ModuleUniqueId(message.get(3));
+            std::string rawProto = message.get(3);
+            zmf::proto::SenderId senderId;
+            senderId.ParseFromString(rawProto);
+            zmf::data::ModuleUniqueId request_identity = zmf::data::ModuleUniqueId((uint16_t) senderId.typeid_(),
+                                                                                   senderId.instanceid());
 
             // get id
             uint64_t id;
@@ -540,7 +546,11 @@ namespace zmf {
 
         void ZmqZmfMessagingServiceImplementation::handleHelloReceived(zmqpp::message& message) {
             // identity
-            zmf::data::ModuleUniqueId identity = zmf::data::ModuleUniqueId(message.get(2));
+            std::string rawProto = message.get(2);
+            zmf::proto::SenderId senderId;
+            senderId.ParseFromString(rawProto);
+            zmf::data::ModuleUniqueId identity = zmf::data::ModuleUniqueId((uint16_t) senderId.typeid_(),
+                                                                           senderId.instanceid());
 
             std::string rep_addr;
             message.get(rep_addr, 3);
@@ -566,7 +576,11 @@ namespace zmf {
                 //printMessage(event);
 
                 // get sender id
-                zmf::data::ModuleUniqueId uniqueId = zmf::data::ModuleUniqueId(event.get(1));
+                std::string rawProto = event.get(1);
+                zmf::proto::SenderId senderId;
+                senderId.ParseFromString(rawProto);
+                zmf::data::ModuleUniqueId uniqueId = zmf::data::ModuleUniqueId((uint16_t) senderId.typeid_(),
+                                                                               senderId.instanceid());
 
                 // build msg
                 zmf::data::ZmfMessage message(event.get(0), event.get(2));

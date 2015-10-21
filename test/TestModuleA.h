@@ -1,7 +1,7 @@
 #ifndef ZMF_UT_TESTMODULEA_H
 #define ZMF_UT_TESTMODULEA_H
 
-#include "../zmf/AbstractModule.hpp"
+#include <AbstractModule.hpp>
 
 /**
  * @brief Simple test module class for testing

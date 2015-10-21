@@ -18,7 +18,7 @@ void zmfInteroptTest::interoptTest() {
 
     auto module = std::make_shared<TestModule>(uniqueId, version, name, dependencies);
 
-    auto handle = zmf::instance::ZmfInstance::startInstance(module, true, true, true, false, false);
+    auto handle = zmf::instance::ZmfInstance::startInstance(module, {});
 
     while (!module->isEnabled()) {
         std::this_thread::sleep_for(std::chrono::milliseconds(100));

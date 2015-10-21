@@ -5,6 +5,7 @@
 #include "../messaging/IZmfMessagingService.hpp"
 #include <messaging_implementation/ExternalRequestIdentity.hpp>
 #include "../messaging/IZmfMessagingCoreInterface.hpp"
+#include "../proto/FrameworkProto.pb.h"
 #include <zmqpp/message.hpp>
 #include <zmqpp/poller.hpp>
 #include <zmqpp/socket.hpp>
@@ -98,6 +99,7 @@ namespace zmf {
              * pointer to the selfHandle
              */
             std::shared_ptr<zmf::data::ModuleHandle> self;
+            zmf::proto::SenderId selfSenderId;
 
             /**
              * pointer to the internal thread handling socket IO

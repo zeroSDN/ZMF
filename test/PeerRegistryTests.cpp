@@ -4,10 +4,10 @@
 
 #include "PeerRegistryTests.h"
 #include "TestModuleA.h"
-#include "../zmf/discovery/PeerRegistry.hpp"
-#include "../zmf/discovery/PeerRegistryInternal.hpp"
-#include "../zmf/AbstractModule.hpp"
-#include "../zmf/data/ModuleHandleInternal.hpp"
+#include <discovery/PeerRegistry.hpp>
+#include <discovery/PeerRegistryInternal.hpp>
+#include <AbstractModule.hpp>
+#include <data/ModuleHandleInternal.hpp>
 #include <memory>
 #include <Poco/Exception.h>
 #include <Poco/Logger.h>

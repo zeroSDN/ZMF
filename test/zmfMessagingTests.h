@@ -1,10 +1,10 @@
-
 #ifndef ZMF_UT_ZMFMESSAGINGTESTS_H
 #define ZMF_UT_ZMFMESSAGINGTESTS_H
 
 #include <cppunit/TestCase.h>
 #include <cppunit/extensions/HelperMacros.h>
-#include "../zmf/core/ModuleEventDispatcher.hpp"
+#include <core/ModuleEventDispatcher.hpp>
+
 /**
  * @brief Unit tests for the event dispatcher class
  * @author Jan Strauß

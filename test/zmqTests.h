@@ -3,7 +3,7 @@
 
 #include <cppunit/TestCase.h>
 #include <cppunit/extensions/HelperMacros.h>
-#include "../zmf/messaging_implementation/ZmqZmfMessagingServiceImplementation.hpp"
+#include <messaging_implementation/ZmqZmfMessagingServiceImplementation.hpp>
 
 using namespace CppUnit;
 
