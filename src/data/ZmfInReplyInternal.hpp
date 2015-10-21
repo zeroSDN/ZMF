@@ -1,11 +1,15 @@
-#ifndef ZMF_ZMFINREPLY_HPP
-#define ZMF_ZMFINREPLY_HPP
+/**
+ * @details TODO Description
+ * @author zsdn 
+ * @date created on 10/21/15
+*/
 
-#include <string>
-#include <stdint.h>
-#include <future>
-#include "ZmfMessage.hpp"
+#ifndef ZMF_ZMFINREPLYINTERNAL_H
+#define ZMF_ZMFINREPLYINTERNAL_H
+
+#include <data/ZmfInReply.hpp>
 #include "../messaging/IZmfMessagingCancelRequestHandler.hpp"
+
 
 namespace zmf {
     namespace data {
@@ -16,27 +20,28 @@ namespace zmf {
          * @author Jan Strauß
          * @date created on 7/7/15.
         */
-        struct ZmfInReply {
+        class ZmfInReplyInternal : ZmfInReply {
 
         private:
-            std::shared_ptr<uint64_t> requestId_;
-            std::future<zmf::data::ZmfMessage> future_;
             zmf::messaging::IZmfMessagingCancelRequestHandler* zmqService_;
 
         public:
 
-            ZmfInReply(uint64_t requestId_, std::future<ZmfMessage> future_,
-                       zmf::messaging::IZmfMessagingCancelRequestHandler* zmqService_) : requestId_(
+            ZmfInReplyInternal(uint64_t requestId_, std::future<ZmfMessage> future_,
+                               zmf::messaging::IZmfMessagingCancelRequestHandler* zmqService_) : requestId_(
                     std::make_shared<uint64_t>(requestId_)),
-                                                                                         future_(std::move(future_)),
-                                                                                         zmqService_(zmqService_) { }
+                                                                                                 future_(std::move(
+                                                                                                         future_)),
+                                                                                                 zmqService_(
+                                                                                                         zmqService_) { }
 
-            ZmfInReply(const ZmfInReply&) = delete;
+            ZmfInReplyInternal(const ZmfInReplyInternal&) = delete;
 
-            ZmfInReply(ZmfInReply&& other) : requestId_(other.requestId_), future_(std::move(other.future_)),
-                                             zmqService_(other.zmqService_) { }
+            ZmfInReplyInternal(ZmfInReplyInternal&& other) : requestId_(other.requestId_),
+                                                             future_(std::move(other.future_)),
+                                                             zmqService_(other.zmqService_) { }
 
-            virtual ~ZmfInReply() {
+            virtual ~ZmfInReplyInternal() {
                 if (requestId_.unique()) {
                     zmqService_->cancelRequest(*requestId_, false);
                 }
@@ -70,11 +75,13 @@ namespace zmf {
             /**
              * Cancels ZMQ request and request future
              */
-            void cancelRequest() {
+            virtual void cancelRequest() {
                 zmqService_->cancelRequest(*requestId_, true);
             }
 
         };
     }
 }
-#endif //ZMF_ZMFINREPLY_HPP
+
+
+#endif //ZMF_ZMFINREPLYINTERNAL_H

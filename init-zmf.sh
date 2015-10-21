@@ -16,7 +16,7 @@ read
 cd $ZDIR
 
 echo $ZDIR > ./util/zmf-dir.txt
-echo "set(ZSDN_DIR $ZDIR)" > ./util/zmf-dir_cmake.txt
+echo "set(ZMF_DIR $ZDIR)" > ./util/zmf-dir_cmake.txt
 
 cd util
 if ./init_dependencies.sh; then
