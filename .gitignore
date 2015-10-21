@@ -1,7 +1,12 @@
 build/*
 util/zmf-dir.txt
 util/zmf-dir_cmake.txt
-src/CMakeFiles/*
+CMakeFiles
+*/CMakeFiles/*
 dependencies/*
 .idea
 Makefile
+CMakeCache.txt
+cmake_install.cmake
+*.log
+zmf_UT
