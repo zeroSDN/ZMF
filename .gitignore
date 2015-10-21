@@ -1,0 +1,5 @@
+build/*
+util/zmf-dir.txt
+util/zmf-dir_cmake.txt
+src/CMakeFiles/*
+dependencies/*

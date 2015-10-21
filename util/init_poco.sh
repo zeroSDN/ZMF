@@ -1,6 +1,5 @@
 echo "POCO Dependency Init SCRIPT"
 
-cd ..
 ZDIR=$(<zmf-dir.txt)
 echo "ZMF-Dir: $ZDIR"
 

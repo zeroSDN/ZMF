@@ -3,7 +3,7 @@ project(zmf)
 
 option(NoTests "NoTests" OFF)
 
-include(${CMAKE_CURRENT_SOURCE_DIR}/../zmf-dir_cmake.txt)
+include(${CMAKE_CURRENT_SOURCE_DIR}/../util/zmf-dir_cmake.txt)
 
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/../build)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/../build)
