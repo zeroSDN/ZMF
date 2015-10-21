@@ -10,12 +10,12 @@
 #include <Poco/SplitterChannel.h>
 #include <Poco/FormattingChannel.h>
 #include <Poco/PatternFormatter.h>
-#include "../AbstractModule.hpp"
-#include "../IZmfInstanceAccess.hpp"
-#include "../IZmfInstanceController.hpp"
+#include <AbstractModule.hpp>
+#include <IZmfInstanceAccess.hpp>
+#include <IZmfInstanceController.hpp>
 #include "../discovery/IPeerDiscoveryService.hpp"
 #include "../discovery/IPeerDiscoveryCoreInterface.hpp"
-#include "../config/IConfigurationProvider.hpp"
+#include <config/IConfigurationProvider.hpp>
 #include "ModuleEventDispatcher.hpp"
 #include "../messaging/IZmfMessagingService.hpp"
 

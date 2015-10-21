@@ -2,8 +2,8 @@
 #define ZMF_ZMQ_SERVICE_H
 
 #include <data/ModuleHandle.hpp>
-#include <messaging/IZmfMessagingService.hpp>
-#include "ExternalRequestIdentity.hpp"
+#include "../messaging/IZmfMessagingService.hpp"
+#include <messaging_implementation/ExternalRequestIdentity.hpp>
 #include "../messaging/IZmfMessagingCoreInterface.hpp"
 #include <zmqpp/message.hpp>
 #include <zmqpp/poller.hpp>
