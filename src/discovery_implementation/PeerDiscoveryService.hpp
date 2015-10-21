@@ -8,12 +8,12 @@
 #include "../discovery/IPeerDiscoveryService.hpp"
 #include "../discovery/PeerRegistryInternal.hpp"
 #include "../data/ModuleHandleInternal.hpp"
-#include "../util/NetworkUtil.hpp"
+#include <util/NetworkUtil.hpp>
 #include <Poco/Net/MulticastSocket.h>
 #include <Poco/Net/HTTPClientSession.h>
 #include <Poco/Random.h>
 #include "../proto/FrameworkProto.pb.h"
-#include "../config/IConfigurationProvider.hpp"
+#include <config/IConfigurationProvider.hpp>
 #include <unistd.h>
 #include <iostream>
 #include <string>

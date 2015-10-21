@@ -3,7 +3,7 @@
 * @date created on 7/7/15.
 */
 
-#include "NetworkUtil.hpp"
+#include <util/NetworkUtil.hpp>
 
 Poco::Net::NetworkInterface zmf::util::NetworkUtil::getNetworkInterface(Poco::Net::IPAddress::Family ip_version) {
     Poco::Net::NetworkInterface::Map m = Poco::Net::NetworkInterface::map();
