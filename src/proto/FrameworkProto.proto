@@ -1,0 +1,23 @@
+package zmf.proto;
+
+option java_package = "jmf.proto";
+
+option java_outer_classname = "FrameworkProto";
+
+
+message SenderId {
+	required uint32 typeId = 1;
+	required uint64 instanceId = 2;
+}
+
+message StateBroadcast {
+	required uint32 zmqPubPort = 1;
+	required uint32 zmqRepPort = 2;
+	required SenderId senderId = 3;
+	required string senderName = 4;
+	required uint32 version = 5;
+	required uint32 lifecycleState = 6;
+	optional uint32 additionalLifecycleInfos = 7;
+	optional bytes additionalStateInfos = 8;
+	required uint32 multicastIdentifier = 9;
+}
