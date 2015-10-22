@@ -51,9 +51,6 @@ else
 fi
 
 
-cd src
-
-
 # Clear ZMF
 find . -name CMakeCache.txt -delete
 find . -name Makefile -delete
