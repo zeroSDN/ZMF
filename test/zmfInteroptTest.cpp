@@ -3,7 +3,7 @@
 //
 
 #include <AbstractModule.hpp>
-#include <instance/ZmfInstance.hpp>
+#include <ZmfInstance.hpp>
 #include "zmfInteroptTest.h"
 #include "TestModule.hpp"
 

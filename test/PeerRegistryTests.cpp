@@ -4,7 +4,7 @@
 
 #include "PeerRegistryTests.h"
 #include "TestModuleA.h"
-#include <discovery/PeerRegistry.hpp>
+#include <PeerRegistry.hpp>
 #include <discovery/PeerRegistryInternal.hpp>
 #include <AbstractModule.hpp>
 #include <data/ModuleHandleInternal.hpp>

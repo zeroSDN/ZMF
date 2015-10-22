@@ -6,7 +6,7 @@
 #define ZMF_UT_TESTMODULE_HPP
 
 #include <AbstractModule.hpp>
-#include <instance/ZmfInstance.hpp>
+#include <ZmfInstance.hpp>
 #include "zmfInteroptTest.h"
 
 

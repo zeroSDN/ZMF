@@ -2,16 +2,16 @@
 // Created by zsdn on 6/25/15.
 //
 
-#include <config/IConfigurationProvider.hpp>
+#include <IConfigurationProvider.hpp>
 #include <config/ConfigurationProvider.hpp>
-#include <data/ModuleHandle.hpp>
+#include <ModuleHandle.hpp>
 #include <data/ModuleHandleInternal.hpp>
 #include <ZmfConsole.hpp>
 #include <Poco/Path.h>
-#include <data/ZmfOutReply.hpp>
+#include <ZmfOutReply.hpp>
 #include "zmfTests.h"
 #include "DummyModule.h"
-#include <instance/ZmfInstance.hpp>
+#include <ZmfInstance.hpp>
 
 
 //  override SetUp from TestFixture
@@ -30,8 +30,8 @@ void zmfTests::testInstance() {
     auto moduleA = std::make_shared<DummyModule>(zmf::data::ModuleUniqueId(13, 37));
     auto moduleB = std::make_shared<DummyModule>(zmf::data::ModuleUniqueId(44, 20));
 
-    auto coreA = zmf::instance::ZmfInstance::startInstance(moduleA, true, true, false, false, false);
-    auto coreB = zmf::instance::ZmfInstance::startInstance(moduleB, true, true, false, false, false);
+    auto coreA = zmf::instance::ZmfInstance::startInstance(moduleA, {});
+    auto coreB = zmf::instance::ZmfInstance::startInstance(moduleB, {});
 
     std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 

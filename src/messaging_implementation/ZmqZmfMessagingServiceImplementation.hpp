@@ -1,9 +1,9 @@
 #ifndef ZMF_ZMQ_SERVICE_H
 #define ZMF_ZMQ_SERVICE_H
 
-#include <data/ModuleHandle.hpp>
+#include "ModuleHandle.hpp"
 #include "../messaging/IZmfMessagingService.hpp"
-#include <messaging_implementation/ExternalRequestIdentity.hpp>
+#include "ExternalRequestIdentity.hpp"
 #include "../messaging/IZmfMessagingCoreInterface.hpp"
 #include "../proto/FrameworkProto.pb.h"
 #include <zmqpp/message.hpp>

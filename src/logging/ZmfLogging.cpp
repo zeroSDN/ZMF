@@ -4,7 +4,7 @@
 */
 
 
-#include <logging/ZmfLogging.hpp>
+#include "ZmfLogging.hpp"
 
 std::atomic_bool zmf::logging::ZmfLogging::initialized = ATOMIC_VAR_INIT(false);
 

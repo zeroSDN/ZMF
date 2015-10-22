@@ -18,7 +18,7 @@
 #include <AbstractModule.hpp>
 #include <IZmfInstanceAccess.hpp>
 #include <IZmfInstanceController.hpp>
-#include <config/IConfigurationProvider.hpp>
+#include <IConfigurationProvider.hpp>
 #include "../messaging/IZmfMessagingService.hpp"
 
 namespace zmf {

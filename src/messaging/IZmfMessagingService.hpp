@@ -2,12 +2,12 @@
 #define ZMF_IZMQSERVICE_H
 
 
-#include <AbstractModule.hpp>
-#include <data/ModuleHandle.hpp>
+#include "AbstractModule.hpp"
+#include "ModuleHandle.hpp"
 #include "IZmfMessagingCoreInterface.hpp"
-#include <data/ZmfOutReply.hpp>
-#include <messaging/IZmfMessagingSendReplyHandler.hpp>
-#include <messaging/IZmfMessagingCancelRequestHandler.hpp>
+#include "ZmfOutReply.hpp"
+#include "IZmfMessagingSendReplyHandler.hpp"
+#include "IZmfMessagingCancelRequestHandler.hpp"
 
 namespace zmf {
     namespace messaging {

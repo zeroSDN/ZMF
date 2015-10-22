@@ -2,8 +2,8 @@
 #define ZMF_IZMQCOREINTERFACE_H
 
 #include <Poco/Logger.h>
-#include <data/ZmfMessage.hpp>
-#include <data/ModuleUniqueId.hpp>
+#include "ZmfMessage.hpp"
+#include "ModuleUniqueId.hpp"
 
 namespace zmf {
     namespace messaging {

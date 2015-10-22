@@ -5,7 +5,7 @@
 #include <stdint.h>
 #include <future>
 #include "ZmfMessage.hpp"
-#include "../messaging/IZmfMessagingCancelRequestHandler.hpp"
+#include "IZmfMessagingCancelRequestHandler.hpp"
 
 namespace zmf {
     namespace data {

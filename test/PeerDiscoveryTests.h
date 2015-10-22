@@ -9,7 +9,7 @@
 #include <cppunit/extensions/HelperMacros.h>
 #include <discovery_implementation/PeerDiscoveryService.hpp>
 #include <core/ZmfCore.hpp>
-#include <instance/ZmfInstance.hpp>
+#include <ZmfInstance.hpp>
 #include "TestModuleP.h"
 
 using namespace CppUnit;

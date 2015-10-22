@@ -1,7 +1,7 @@
 #ifndef ZMF_PEERREGISTRYINTERNAL_H
 #define ZMF_PEERREGISTRYINTERNAL_H
 
-#include <discovery/PeerRegistry.hpp>
+#include "PeerRegistry.hpp"
 
 
 namespace zmf {

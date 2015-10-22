@@ -6,13 +6,13 @@
 #include <list>
 #include <memory>
 #include <map>
-#include "config/IConfigurationProvider.hpp"
-#include "discovery/PeerRegistry.hpp"
-#include "data/ModuleHandle.hpp"
-#include "data/MessageType.hpp"
-#include "data/ZmfMessage.hpp"
-#include "data/ModuleUniqueId.hpp"
-#include "data/ZmfInReply.hpp"
+#include "IConfigurationProvider.hpp"
+#include "PeerRegistry.hpp"
+#include "ModuleHandle.hpp"
+#include "MessageType.hpp"
+#include "ZmfMessage.hpp"
+#include "ModuleUniqueId.hpp"
+#include "ZmfInReply.hpp"
 
 
 namespace zmf {

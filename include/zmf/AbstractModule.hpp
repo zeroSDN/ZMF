@@ -5,9 +5,9 @@
 #include <stdint.h>
 #include <vector>
 #include "IZmfInstanceAccess.hpp"
-#include "data/ZmfOutReply.hpp"
-#include "logging/ZmfLogging.hpp"
-#include "logging/ZmfLoggingContainer.hpp"
+#include "ZmfOutReply.hpp"
+#include "ZmfLogging.hpp"
+#include "ZmfLoggingContainer.hpp"
 #include <Poco/Logger.h>
 
 
@@ -39,7 +39,7 @@ namespace zmf {
      * @date created on 6/25/15.
      */
     class AbstractModule {
-    
+
     public:
         /** Enabled state of a module */
         enum ModuleState {

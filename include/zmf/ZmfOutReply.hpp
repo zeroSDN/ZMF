@@ -3,7 +3,7 @@
 
 #include <stdint.h>
 #include "ZmfMessage.hpp"
-#include "../messaging/IZmfMessagingSendReplyHandler.hpp"
+#include "IZmfMessagingSendReplyHandler.hpp"
 
 namespace zmf {
     namespace data {

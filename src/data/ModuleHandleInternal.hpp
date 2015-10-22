@@ -1,7 +1,7 @@
 #ifndef ZMF_MODULEHANDLEINTERNAL_HPP
 #define ZMF_MODULEHANDLEINTERNAL_HPP
 
-#include <data/ModuleHandle.hpp>
+#include "ModuleHandle.hpp"
 
 namespace zmf {
     namespace data {

@@ -4,7 +4,7 @@
 
 
 #include "PeerDiscoveryService.hpp"
-#include <config/IConfigurationProvider.hpp>
+#include "IConfigurationProvider.hpp"
 
 
 namespace zmf {

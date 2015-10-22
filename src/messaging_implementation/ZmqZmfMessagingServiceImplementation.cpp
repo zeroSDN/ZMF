@@ -5,7 +5,7 @@
 
 #include "ZmqZmfMessagingServiceImplementation.hpp"
 #include "../data/ModuleHandleInternal.hpp"
-#include <util/NetworkUtil.hpp>
+#include "NetworkUtil.hpp"
 
 namespace zmf {
     namespace messaging {

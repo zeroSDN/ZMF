@@ -1,7 +1,7 @@
 #ifndef ZMF_EXTERNALREQUESTIDENTITY_HPP
 #define ZMF_EXTERNALREQUESTIDENTITY_HPP
 
-#include "../data/ModuleUniqueId.hpp"
+#include "ModuleUniqueId.hpp"
 
 namespace zmf {
     namespace messaging {

@@ -2,8 +2,8 @@
 #define ZMF_IZMFMESSAGINGSENDREPLYHANDLER_HPP
 
 #include <stdint.h>
-#include "../data/ZmfMessage.hpp"
-#include "../messaging_implementation/ExternalRequestIdentity.hpp"
+#include "ZmfMessage.hpp"
+#include "ExternalRequestIdentity.hpp"
 
 namespace zmf {
     namespace messaging {

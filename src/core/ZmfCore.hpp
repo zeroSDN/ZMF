@@ -15,7 +15,7 @@
 #include <IZmfInstanceController.hpp>
 #include "../discovery/IPeerDiscoveryService.hpp"
 #include "../discovery/IPeerDiscoveryCoreInterface.hpp"
-#include <config/IConfigurationProvider.hpp>
+#include <IConfigurationProvider.hpp>
 #include "ModuleEventDispatcher.hpp"
 #include "../messaging/IZmfMessagingService.hpp"
 

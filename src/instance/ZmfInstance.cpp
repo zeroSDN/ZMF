@@ -4,7 +4,7 @@
  * @author Andre Kutzleb
 * @date created on 7/7/15.
  */
-#include <instance/ZmfInstance.hpp>
+#include "ZmfInstance.hpp"
 #include "../config/ConfigurationProvider.hpp"
 #include "../discovery/IPeerDiscoveryService.hpp"
 #include "../discovery_implementation/PeerDiscoveryService.hpp"

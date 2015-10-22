@@ -6,8 +6,8 @@
 #include <list>
 #include <stdint.h>
 #include <Poco/Logger.h>
-#include "../data/ModuleHandle.hpp"
-#include "../logging/ZmfLogging.hpp"
+#include "ModuleHandle.hpp"
+#include "ZmfLogging.hpp"
 
 
 namespace zmf {

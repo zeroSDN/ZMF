@@ -1,8 +1,8 @@
 #ifndef ZMF_CONFIGURATIONPROVIDER_H
 #define ZMF_CONFIGURATIONPROVIDER_H
 
-#include <config/IConfigurationProvider.hpp>
-#include <logging/ZmfLogging.hpp>
+#include "IConfigurationProvider.hpp"
+#include "ZmfLogging.hpp"
 #include <string>
 #include <Poco/Util/PropertyFileConfiguration.h>
 #include <Poco/AutoPtr.h>

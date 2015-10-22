@@ -4,9 +4,9 @@
 #include <memory>
 #include <set>
 #include "IPeerDiscoveryCoreInterface.hpp"
-#include <data/ModuleHandle.hpp>
-#include <discovery/PeerRegistry.hpp>
-#include <config/IConfigurationProvider.hpp>
+#include <ModuleHandle.hpp>
+#include <PeerRegistry.hpp>
+#include <IConfigurationProvider.hpp>
 
 
 namespace zmf {

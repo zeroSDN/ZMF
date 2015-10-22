@@ -10,8 +10,8 @@
 #define DEPRECATED
 #endif
 
-#include "../AbstractModule.hpp"
-#include "../IZmfInstanceController.hpp"
+#include "AbstractModule.hpp"
+#include "IZmfInstanceController.hpp"
 
 namespace zmf {
     namespace instance {

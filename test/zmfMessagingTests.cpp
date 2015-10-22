@@ -4,7 +4,7 @@
 
 #include <config/ConfigurationProvider.hpp>
 #include <data/ModuleHandleInternal.hpp>
-#include <instance/ZmfInstance.hpp>
+#include <ZmfInstance.hpp>
 #include <core/ZmfCore.hpp>
 #include "zmfMessagingTests.h"
 
