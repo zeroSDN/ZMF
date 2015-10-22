@@ -5,7 +5,7 @@ option(NoTests "NoTests" OFF)
 
 include(${CMAKE_CURRENT_SOURCE_DIR}/util/zmf-dir_cmake.txt)
 
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${ZMF_DIR}/build)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${ZMF_DIR}/lib)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -D_DEBUG")
 

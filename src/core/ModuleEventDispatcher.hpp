@@ -15,10 +15,10 @@
 #include <Poco/FormattingChannel.h>
 #include <Poco/PatternFormatter.h>
 #include <Poco/NotificationQueue.h>
-#include <AbstractModule.hpp>
-#include <IZmfInstanceAccess.hpp>
-#include <IZmfInstanceController.hpp>
-#include <IConfigurationProvider.hpp>
+#include "AbstractModule.hpp"
+#include "IZmfInstanceAccess.hpp"
+#include "IZmfInstanceController.hpp"
+#include "IConfigurationProvider.hpp"
 #include "../messaging/IZmfMessagingService.hpp"
 
 namespace zmf {

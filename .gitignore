@@ -1,4 +1,4 @@
-build/*
+lib/*
 util/zmf-dir.txt
 util/zmf-dir_cmake.txt
 CMakeFiles

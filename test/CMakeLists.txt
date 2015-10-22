@@ -7,8 +7,8 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
 
 include_directories("../src")
 include_directories("../include/zmf")
-include_directories("/home/zsdn/zsdn-git/dependencies/include")
-link_directories("/home/zsdn/zsdn-git/dependencies/lib")
+include_directories("../dependencies/include")
+link_directories("../dependencies/lib")
 
 FIND_PATH(CPPUNIT_INCLUDE_DIRS cppunit/TestCase.h
         /usr/local/include
