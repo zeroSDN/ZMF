@@ -1,40 +1,45 @@
-echo "### Installing ZSDN environment ###"
+echo "### Installing ZMF environment ###"
 echo ""
-echo "I will try to get it work"
+echo "Initializing zhe ZMF environment"
 echo "THIS MAY TAKE SOME TIME"
-
-echo ""
+echo 
 
 ZDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo "Installing to directory: $ZDIR"
 
 echo ""
-echo "Press enter to continue (or Ctrl+C to cancel)"
+echo "Press enter to continue or wait 10s (or Ctrl+C to cancel)"
+read -t 10
 
-read
 
 cd $ZDIR
+
 
 echo $ZDIR > ./util/zmf-dir.txt
 echo "set(ZMF_DIR $ZDIR)" > ./util/zmf-dir_cmake.txt
 
+
 cd util
+echo
+echo "## Start init ZMF dependencies"
 if ./init_dependencies.sh; then
-	echo "# init_dependencies success"
+	echo "# Init ZMF dependencies success"
 else
 	result=$?
-	echo "!! Failed to init_dependencies"
+	echo "!! Failed to init ZMF dependencies"
 	exit ${result}
 fi
 cd ..
 
 
+echo
+echo "## Start build ZMF"
 if ./build-zmf.sh; then
-	echo "# Build ALL success"
+	echo "# Build ZMF success"
 else
 	result=$?
-	echo "!! Failed to build ALL"
+	echo "!! Failed to build ZMF"
 	exit ${result}
 fi
 
-echo "### Finished Its-Not-Working Script ###"
+echo "### Finished Installing ZMF environment ###"
