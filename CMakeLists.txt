@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.2)
 project(zmf)
 
-option(NoTests "NoTests" OFF)
+option(NoTests "NoTests" ON)
 
 include(${CMAKE_CURRENT_SOURCE_DIR}/util/zmf-dir_cmake.txt)
 
