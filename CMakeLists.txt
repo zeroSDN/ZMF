@@ -7,7 +7,7 @@ include(${CMAKE_CURRENT_SOURCE_DIR}/util/zmf-dir_cmake.txt)
 
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${ZMF_DIR}/lib)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -D_DEBUG")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -O3")
 
 include_directories("${ZMF_DIR}/dependencies/include")
 include_directories("${ZMF_DIR}/include/zmf")
