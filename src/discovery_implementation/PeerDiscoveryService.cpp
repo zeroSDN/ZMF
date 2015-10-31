@@ -4,7 +4,6 @@
 
 
 #include "PeerDiscoveryService.hpp"
-#include "IConfigurationProvider.hpp"
 
 
 namespace zmf {
@@ -290,7 +289,7 @@ namespace zmf {
                                            std::to_string(peerState));
                         peerRegistryInternal->INTERNAL_updatePeerState(
                                 peerHandle->UniqueId, peerState);
-                        core_->peerStateChange(peerHandle, peerState, oldState);
+                        core_->onPeerChange(peerHandle, peerState, oldState);
                     }
                 }
             }
@@ -360,7 +359,7 @@ namespace zmf {
             }
             static_cast<zmf::discovery::PeerRegistryInternal*>(peerRegistry_.get())->addModule(newPeer,
                                                                                                state, additionalState);
-            core_->peerStateChange(newPeer, state, zmf::data::ModuleState::Dead);
+            core_->onPeerChange(newPeer, state, zmf::data::ModuleState::Dead);
         }
 
         void PeerDiscoveryService::onPeerDead(std::shared_ptr<zmf::data::ModuleHandle> deadPeer) {
@@ -370,7 +369,7 @@ namespace zmf {
             zmf::data::ModuleState lastState = peerRegistry_->getPeerState(deadPeer);
             static_cast<zmf::discovery::PeerRegistryInternal*>(peerRegistry_.get())->removeModule(deadPeer->UniqueId);
             poco_information(logger, "Removed module from registry: " + deadPeer->UniqueId.getString());
-            core_->peerStateChange(deadPeer, zmf::data::ModuleState::Dead, lastState);
+            core_->onPeerChange(deadPeer, zmf::data::ModuleState::Dead, lastState);
         }
 
         void PeerDiscoveryService::disposeThread() {

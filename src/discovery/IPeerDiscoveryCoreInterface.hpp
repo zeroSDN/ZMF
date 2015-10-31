@@ -18,9 +18,9 @@ namespace zmf {
 
         public:
 
-            virtual void peerStateChange(std::shared_ptr<zmf::data::ModuleHandle> module,
-                                         zmf::data::ModuleState newState,
-                                         zmf::data::ModuleState lastState) = 0;
+            virtual void onPeerChange(std::shared_ptr<zmf::data::ModuleHandle> module,
+                                      zmf::data::ModuleState newState,
+                                      zmf::data::ModuleState lastState) = 0;
         };
     }
 }

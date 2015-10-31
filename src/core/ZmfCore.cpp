@@ -78,7 +78,7 @@ namespace zmf {
             poco_information(logger_, "Started ZMQ Service");
 
             // Now start peer discovery service
-            if (!peerDiscoveryService_->start(configProvider_, this, selfModuleHandle_,
+            if (!peerDiscoveryService_->start(configProvider_, eventDispatcher_.get(), selfModuleHandle_,
                                               ZmfCore::PEER_DISCOVERY_BROADCAST_FREQ, ZmfCore::PEER_DISCOVERY_UDP_PORT,
                                               peerDiscoveryWait, disableEqualModuleInterconnect)) {
                 poco_error(logger_, "Start ZMF Core: Failed to start Peer Discovery Service - canceling Start");
@@ -345,12 +345,6 @@ namespace zmf {
 
 
         // -------------------- Peer Discovery -------------------- \\
-
-        void ZmfCore::peerStateChange(std::shared_ptr<zmf::data::ModuleHandle> module,
-                                      zmf::data::ModuleState newState,
-                                      zmf::data::ModuleState lastState) {
-            eventDispatcher_->onPeerChange(module, newState, lastState);
-        }
 
         void ZmfCore::onModuleAdditionalStateChanged(std::vector<uint8_t> additionalState) {
             peerDiscoveryService_->updateSelfAdditionalState(additionalState);

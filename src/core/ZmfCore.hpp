@@ -14,7 +14,6 @@
 #include <IZmfInstanceAccess.hpp>
 #include <IZmfInstanceController.hpp>
 #include "../discovery/IPeerDiscoveryService.hpp"
-#include "../discovery/IPeerDiscoveryCoreInterface.hpp"
 #include <IConfigurationProvider.hpp>
 #include "ModuleEventDispatcher.hpp"
 #include "../messaging/IZmfMessagingService.hpp"
@@ -34,8 +33,7 @@ namespace zmf {
          * @author Jonas Grunert
          * @date created on 6/24/15.
         */
-        class ZmfCore : public zmf::IZmfInstanceAccess, public zmf::IZmfInstanceController,
-                        public zmf::discovery::IPeerDiscoveryCoreInterface {
+        class ZmfCore : public zmf::IZmfInstanceAccess, public zmf::IZmfInstanceController {
 
         public:
             /**
@@ -113,10 +111,6 @@ namespace zmf {
             virtual void onModuleAdditionalStateChanged(std::vector<uint8_t> additionalState);
 
             virtual void forceStateBroadcast();
-
-            virtual void peerStateChange(std::shared_ptr<zmf::data::ModuleHandle> module,
-                                         zmf::data::ModuleState newState,
-                                         zmf::data::ModuleState lastState);
 
 
             /**

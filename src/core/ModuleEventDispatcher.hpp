@@ -20,6 +20,7 @@
 #include "IZmfInstanceController.hpp"
 #include "IConfigurationProvider.hpp"
 #include "../messaging/IZmfMessagingService.hpp"
+#include "../discovery/IPeerDiscoveryCoreInterface.hpp"
 
 namespace zmf {
     namespace core {
@@ -33,6 +34,7 @@ namespace zmf {
         */
         class ModuleEventDispatcher
                 : public zmf::messaging::IZmfMessagingCoreInterface,
+                  public zmf::discovery::IPeerDiscoveryCoreInterface,
                   public IZmfInstanceAccess::SubscriptionHandle::ISubscriptionHandler {
         public:
             ModuleEventDispatcher(zmf::data::ModuleUniqueId id,
