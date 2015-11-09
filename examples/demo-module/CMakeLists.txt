@@ -22,10 +22,10 @@ add_executable(${PROJECT_NAME} main.cpp
         DemoModuleConsole.cpp
         DemoModuleConsole.hpp
 
-        ../../modules/ExampleModuleA/ExampleModuleA.cpp
-        ../../modules/ExampleModuleA/ExampleModuleA.hpp
-        ../../modules/ExampleModuleB/ExampleModuleB.cpp
-        ../../modules/ExampleModuleB/ExampleModuleB.hpp
+        #../../modules/ExampleModuleA/ExampleModuleA.cpp
+        #../../modules/ExampleModuleA/ExampleModuleA.hpp
+        #../../modules/ExampleModuleB/ExampleModuleB.cpp
+        #../../modules/ExampleModuleB/ExampleModuleB.hpp
 )
 
 
