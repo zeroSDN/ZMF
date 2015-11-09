@@ -1,15 +1,18 @@
 # ZMF
 
-Zero Module Framework, framework for distrubed module execution, the Framework the ZSDN controller is build on.
+Zero Module Framework. ZMF is a framework for modular, distributed systems build on top of ZMQ. The [ZeroSDN Controller](https://github.com/zeroSDN/ZSDN-Controller) is build on top of ZMF, but other systems can use it as well.
 
 ## Licence
 
-ZMF is licenced under the Apache License Version 2.0, see LICENCE.md
-
+ZMF is licenced under the Apache License Version 2.0, see [LICENCE.md](LICENCE.md)
 ## Startup
 
-Pull the repository and run init-zmf.sh.
+Pull the repository and run `init-zmf.sh`.
 
 ## Build
 
-ZMF uses CMake as build system. You can run *build-zmf.sh* to generate the library.
+ZMF uses CMake as build system. You can run `build-zmf.sh` to generate the library.
+
+## Documentation
+
+Further documentation can be found in the [Wiki](https://github.com/zeroSDN/ZMF/wiki)
