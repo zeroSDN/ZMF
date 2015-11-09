@@ -1,6 +1,6 @@
 # ZMF
 
-Zero Module Framework, framework for distrubed module execution, the Framework the ZSDN controller is build on.
+Zero Module Framework. ZMF is a framework for modular, distributed systems build on top of ZMQ. The ZeroSDN Controller is build on top of ZMF, but other system could use it as well.
 
 ## Licence
 
