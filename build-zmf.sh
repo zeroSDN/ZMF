@@ -1,3 +1,6 @@
+#!/bin/bash
+
+# Script for building the ZMF library
 
 echo "### Start Build ZMF ###"
 

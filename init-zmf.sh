@@ -1,3 +1,7 @@
+#!/bin/bash
+
+# Script for initializing this ZMF directory
+
 echo "### Installing ZMF environment ###"
 echo ""
 echo "Initializing zhe ZMF environment"
