@@ -12,3 +12,7 @@ Pull the repository and run `init-zmf.sh`.
 ## Build
 
 ZMF uses CMake as build system. You can run `build-zmf.sh` to generate the library.
+
+## Documentation
+
+Further documentation can be found in the [Wiki](https://github.com/zeroSDN/ZMF/wiki)
