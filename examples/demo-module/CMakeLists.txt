@@ -15,6 +15,13 @@ option(PiTarget "PiTarget" OFF)
 option(Verbose "Verbose" OFF)
 
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -O3 -Wl,--no-as-needed -pthread")
+if(Verbose)
+	message("# Verbose enabled")
+  	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -v")
+endif()
+
+
 # Set module cmake files folder path
 set(MODULE_CMAKE_FOLDER "${ZSDN_DIR_RELATIVE}/modules/cpp/cmake")
 
