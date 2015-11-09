@@ -5,15 +5,27 @@ cmake_minimum_required(VERSION 3.2)
 set(PROJECT_NAME demo-module)
 project(${PROJECT_NAME})
 
-
 # Set ZSDN root folder path relative to project (needed for module cmake files)
-set(ZSDN_DIR_RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}/../../..")
+include(ZMF_DIR "${CMAKE_CURRENT_SOURCE_DIR}/zmf-dir_cmake.txt")
+
+project(${PROJECT_NAME})
+
+option(NoTests "NoTests" ON)
+option(PiTarget "PiTarget" OFF)
+option(Verbose "Verbose" OFF)
+
+
 # Set module cmake files folder path
 set(MODULE_CMAKE_FOLDER "${ZSDN_DIR_RELATIVE}/modules/cpp/cmake")
 
 
 # Include from external file
 include(${MODULE_CMAKE_FOLDER}/cmake_module_header.txt)
+
+
+
+
+
 
 add_executable(${PROJECT_NAME} main.cpp
         ${ADDITIONAL_DEPENDENCIES}
