@@ -66,7 +66,6 @@ namespace zmf {
             }
 
             logger_.information("Starting ZMF Core");
-            poco_warning(logger_, "TestVersion 1.01");
 
             isStopped_ = false;
 
@@ -95,6 +94,12 @@ namespace zmf {
             exitWhenEnableFail_ = exitWhenEnableFail;
             enableRequested_ = moduleAutoEnable;
 
+            logger_.fatal("AA");
+            // Check if module ID not unique
+            if (!moduleIsUnique()) {
+                logger_.warning("Module not unique - other module with same ID found. Enabling will not be possible");
+                stopRequested_ = true;
+            }
 
             // Start zmfCheckThread
             poco_information(logger_, "Starting module state check thread");
