@@ -94,7 +94,6 @@ namespace zmf {
             exitWhenEnableFail_ = exitWhenEnableFail;
             enableRequested_ = moduleAutoEnable;
 
-            logger_.fatal("AA");
             // Check if module ID not unique
             if (!moduleIsUnique()) {
                 logger_.warning("Module not unique - other module with same ID found. Enabling will not be possible");
