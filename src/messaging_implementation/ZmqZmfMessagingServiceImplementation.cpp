@@ -235,6 +235,8 @@ namespace zmf {
                 lock_queue_membership_changes.unlock();
 
                 notifyPoller(NotifyType::MEMBERSHIP_CHANGE);
+            } else {
+                logger_main.debug("tried to add peer already known: " + identity.getString());
             }
 
             lock_map_sockets_req.unlock();
