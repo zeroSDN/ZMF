@@ -21,8 +21,6 @@ namespace zmf {
 
         std::string line;
 
-        std::cin.ignore();
-
         while (!instanceController_->isStopped()) {
             std::getline(std::cin, line);
 
